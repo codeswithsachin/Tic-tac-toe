@@ -2,3 +2,4 @@
 *.jar
 node_modules/
 .vercel
+Counter.zip
