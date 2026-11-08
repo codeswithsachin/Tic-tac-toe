@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tic-Tac-Toe with an unbeatable minimax AI. Play vs computer or a friend.">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>TIC · TAC · TOE</h1>
+
+    <div class="row modes" role="group" aria-label="Game mode">
+      <button id="modeAI" class="pill active" aria-pressed="true">vs Computer</button>
+      <button id="modeHuman" class="pill" aria-pressed="false">vs Friend</button>
+    </div>
+
+    <div class="row levels" id="levels" role="group" aria-label="Difficulty">
+      <button class="pill small" data-level="easy" aria-pressed="false">Easy</button>
+      <button class="pill small" data-level="medium" aria-pressed="false">Medium</button>
+      <button class="pill small active" data-level="hard" aria-pressed="true">Unbeatable</button>
+    </div>
+
+    <section class="scores" aria-label="Scoreboard">
+      <div class="card x"><strong id="sx">0</strong><span id="lx">X (You)</span></div>
+      <div class="card d"><strong id="sd">0</strong><span>Draw</span></div>
+      <div class="card o"><strong id="so">0</strong><span id="lo">O (AI)</span></div>
+    </section>
+
+    <div id="board" class="board" role="grid" aria-label="Game board"></div>
+
+    <p id="status" class="status" aria-live="polite">Your turn</p>
+
+    <div class="row actions">
+      <button id="newGame" class="btn primary">New Game</button>
+      <button id="resetScore" class="btn">Reset Score</button>
+    </div>
+
+    <footer>Made by Sachin · <a href="https://github.com/codeswithsachin/Tic-tac-toe" target="_blank" rel="noopener">Source on GitHub</a></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
