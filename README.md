@@ -1,50 +1,66 @@
 # Tic-Tac-Toe
 
-Tic-Tac-Toe with an unbeatable AI. Two versions of the same game:
+Tic-Tac-Toe with a Minimax AI (3 levels on the web, unbeatable at the top), built twice: as a web page and as a Java desktop app.
 
-- **Web version** (HTML, CSS, JavaScript) in the root folder. Play it in any browser.
-- **Java Swing version** in the `java/` folder (desktop window).
+- **Status:** finished
+- **Keywords:** HTML, CSS, JavaScript, Java, Swing, Minimax, Alpha-Beta Pruning
 
-## Features
+## Highlights
 
-- Play **vs Computer** or **vs Friend**
-- 3 difficulty levels: Easy, Medium, Unbeatable
-- AI uses **Minimax with Alpha-Beta Pruning**
-- Score board (X, O, Draw) saved in the browser
-- Ghost preview on hover, green highlight on the winning line
-- Works on mobile and desktop, keyboard friendly
+- Built the same game in two versions: web (HTML, CSS, JavaScript) and Java Swing (desktop window).
+- Added an AI with Minimax and Alpha-Beta Pruning. On "Unbeatable", the best a player can get is a draw.
+- Added 3 levels in the web version: Easy (random moves), Medium (random half of the time) and Unbeatable.
+- Added play vs Computer or vs Friend, a score board saved in the browser, a ghost preview of your move on hover and a green line on the winning cells.
+- Made the web page work on phone and desktop.
 
-## Run the web version
+## Screenshots
 
-Open `index.html` in your browser. No install needed.
+![Winning against the computer on Easy](docs/screenshots/01-easy-win.png)
 
-## Run the Java version
+vs Computer on Easy: the winning column turns green and the score updates.
 
-You need JDK 8 or later.
+![Two players, X wins](docs/screenshots/02-vs-friend.png)
 
+vs Friend: two players on one screen, and a win on the bottom row.
+
+![A draw on Medium](docs/screenshots/03-medium-draw.png)
+
+vs Computer on Medium: the game ends in a draw.
+
+## Tech
+
+- HTML, CSS, JavaScript: the web version, no framework and no install.
+- Java Swing: the desktop version. Cells are painted by hand, so there is no default Swing look.
+- Minimax with Alpha-Beta Pruning: the AI tries every possible game from the current board and skips branches that cannot change the result. The same logic is written in both languages.
+
+## Run it
+
+- Needs: any browser for the web version. JDK 8 or newer for the Java version.
+- Tested on: Windows, Chrome (web version)
+
+```bash
+git clone https://github.com/sachinkrcodes/Tic-tac-toe.git
+cd Tic-tac-toe
 ```
+
+Web version: open `index.html` in a browser.
+
+Java version:
+
+```bash
 cd java
 javac TicTacToe.java
 java TicTacToe
 ```
 
-## Project structure
+## Limits and next
 
-```
-index.html     page
-style.css      design
-script.js      game logic + AI
-java/          Java Swing version
-```
+- Not done: the Java version has only the Unbeatable AI. The 3 levels exist only in the web version.
+- Not done: the Java version keeps the score only while the window is open.
+- Not done: no automated tests.
 
-## How the AI works
+## Author
 
-- It tries every possible game from the current board.
-- O (AI) picks the move with the highest score, X (you) with the lowest.
-- A faster win scores higher, a slower loss scores better.
-- Alpha-Beta Pruning skips branches that cannot change the result.
-- On **Unbeatable**, the best you can do is a draw.
+Sachin Kumar | [GitHub](https://github.com/sachinkrcodes) | [LinkedIn](https://www.linkedin.com/in/sachinkrcodes) | Portfolio: [sachinkrcodes.vercel.app](https://sachinkrcodes.vercel.app) | sachinkrcodes@gmail.com
 
-## Live demo
-
-Add your Vercel link here after deploying.
+MIT License. See [LICENSE](LICENSE).
