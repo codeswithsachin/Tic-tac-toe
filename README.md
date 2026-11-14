@@ -57,7 +57,6 @@ java TicTacToe
 
 - Not done: the Java version has only the Unbeatable AI. The 3 levels exist only in the web version.
 - Not done: the Java version keeps the score only while the window is open.
-- Not done: no automated tests.
 
 ## Author
 
